@@ -3,23 +3,23 @@ const externals = require("webpack-node-externals");
 
 module.exports = {
   target: "node",
-  entry: "./src/server/index.js",
+  entry: "./src/server/index.tsx",
   mode: "production",
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "server.js",
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   externals: [externals()],
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: "ts-loader",
         },
       },
     ],

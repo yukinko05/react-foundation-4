@@ -1,7 +1,8 @@
+import React from "react"
 import express from "express";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
-import App from "../shared/App.jsx";
+import App from "../shared/App";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
