@@ -19,6 +19,14 @@ module.exports = {
           loader: "ts-loader",
         },
       },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader", // CSSをDOMに挿入
+          "css-loader", // CSSをJavaScriptに変換
+          "postcss-loader", // PostCSSを適用
+        ],
+      },
     ],
   },
 };
