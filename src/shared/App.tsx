@@ -1,7 +1,17 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "../pages/Home";
+import { Provider } from "react-redux";
+import { store } from "../app/store";
 
 const App = () => {
-  return <div className="text-3xl text-red-300">Hello from SSR!</div>;
+  return (
+    <Provider store={store}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Provider>
+  );
 };
 
 export default App;
