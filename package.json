@@ -5,7 +5,8 @@
   "scripts": {
     "build:server": "webpack --config ./webpack/server.config.js",
     "build:client": "webpack --config ./webpack/client.config.js",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "server": "node src/server/server.js"
   },
   "keywords": [],
   "author": "",
